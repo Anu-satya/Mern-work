@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <title>Counter APP</title>
+     <style>
+      .container {
+        background-color: aqua;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+      }
+      .counter {
+        border: 5px solid black;
+        padding: 20px;
+        color: white;
+        background-color: blueviolet;
+        border-radius: 10%;
+      }
+       span {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+      .buttonsDiv {
+        margin: 15px;
+      }
+      button {
+        color: white;
+        padding: 5px;
+        font-weight: 700;
+      }
+      #subtract {
+        background-color: rgb(220, 26, 123);
+      }
+      #reset {
+        background-color: white;
+        color:black;
+      }
+      #add {
+        background-color: rgb(51, 21, 184);
+      } 
+    </style> 
+  </head>
+  <body>
+    <div class="container">
+      <div class="counter">
+        <h1>Counter APP</h1>
+        <span id="counterValue">0</span>
+        <hr />
+        <div class="buttonsDiv">
+          <button id="subtract">Subtract</button>
+          <button id="reset">Reset</button>
+          <button id="add">Add</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      let c=0;
+      const subtractBtn=document.getElementById("subtract");
+      const resetBtn=document.getElementById("reset");
+      const addBtn=document.getElementById("add");
+      const counterDisplay=document.getElementById("counterValue");
+      addBtn.addEventListener("click", ()=> {
+        c++;
+        counterDisplay.textContent=c;
+      });
+      subtractBtn.addEventListener("click",()=>{
+        c--;
+        counterDisplay.textContent=c;
+      });
+      resetBtn.addEventListener("click",()=>{
+        c=0;
+        counterDisplay.textContent=c;
+      });
+    </script>
+  </body>
+</html>
