@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <script>
+            function getDatasync(customer, food){
+                return new promise((reslove) => {
+                    setTimeout(() =>
+                {
+                    reslove(food +" is ready for "+customer +"!");
+                },5000);
+                });
+            }
+            console.log("Total 5 customer entered the restaurant");
+            console.log("Customer 1 order taken");
+            console.log("Customer 1 Waiting for Biryani..\n");
+            getDatasync("Customer 1","Briyani")
+            .then((food)=> console.log(food));
+            
+            console.log("Customer 2 order taken");
+            console.log("Customer 2 Waiting for Biryani..\n");
+            getDatasync("Customer 2","Briyani")
+            .then((food)=> console.log(food));
+            console.log("Customer 3 order taken");
+            console.log("Customer 3 Waiting for Biryani..\n");
+            getDatasync("Customer 3","Briyani")
+            .then((food)=> console.log(food));
+            console.log("Customer 4 order taken");
+            console.log("Customer 4 Waiting for Biryani..\n");
+            getDatasync("Customer 4","Briyani")
+            .then((food)=> console.log(food));
+            
+            console.log("Customer 5 order taken");
+            console.log("Customer 5 Waiting for Biryani..\n");
+            getDatasync("Customer 5","Briyani")
+            .then((food)=> console.log(food));
+
+        </script>
+    </body>
+</html>
